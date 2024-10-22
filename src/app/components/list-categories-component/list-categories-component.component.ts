@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Category } from 'src/app/models/category';
 
 @Component({
-  selector: 'app-list-categories-component',
+  selector: 'ngx-app-list-categories-component',
   templateUrl: './list-categories-component.component.html',
   styleUrls: ['./list-categories-component.component.css']
 })

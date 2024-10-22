@@ -17,7 +17,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProductModule } from './features/product/product.module';
 import { ProductsCategoryComponent } from './components/products-category/products-category.component';
 import { FilterProductPipe } from './pipe/filter-product.pipe';
-
+import { FormUserComponentComponent } from './components/form-user-component/form-user-component.component';
 
 
 @NgModule({
@@ -33,13 +33,16 @@ import { FilterProductPipe } from './pipe/filter-product.pipe';
     HighlightDirective,
     NotFoundComponent,
     ProductsCategoryComponent,
-   
-   
+    FormUserComponentComponent,
+
+
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule 
+    FormsModule,
+    ProductModule
   ],
   providers: [],
   bootstrap: [AppComponent]

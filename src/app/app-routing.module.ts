@@ -20,10 +20,12 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
 
 function m(value: typeof import("C:/Users/Negam/Documents/GitHub/AngularProjet/src/app/features/apropos/apropos.module")): typeof import("C:/Users/Negam/Documents/GitHub/AngularProjet/src/app/features/apropos/apropos-routing.module") | PromiseLike<typeof import("C:/Users/Negam/Documents/GitHub/AngularProjet/src/app/features/apropos/apropos-routing.module")
 >
 
-{  throw new Error('Function not implemented.');
+{
+   throw new Error('Function not implemented.');
 }
