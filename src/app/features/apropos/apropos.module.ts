@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AproposComponent } from '../../apropos/apropos.component';
 
-import { AproposRoutingModule } from './apropos-routing.module';
-import { AproposComponent } from '../../components/apropos/apropos.component';
 
 
 @NgModule({
@@ -10,8 +9,7 @@ import { AproposComponent } from '../../components/apropos/apropos.component';
     AproposComponent
   ],
   imports: [
-    CommonModule,
-    AproposRoutingModule
+    CommonModule
   ]
 })
 export class AproposModule { }

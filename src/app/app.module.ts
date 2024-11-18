@@ -1,49 +1,43 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import { NgModule } from "@angular/core";
+import { AppComponent } from "./app.component";
+import { FooterComponent } from "./Components/footer/footer.component";
+import { HeaderComponent } from "./Components/header/header.component";
+import { HomeComponent } from "./Components/home/home.component";
+import { ListCategoriesComponent } from "./Components/list-categories/list-categories.component";
+import { UserComponent } from "./Components/user/user.component";
+import { HighlightDirective } from "./directive/highlight.directive";
+import { FilterPipe } from "./pipe/filter.pipe";
+import { FormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
-import { ProductComponent } from './components/product/product.component';
-import { FormsModule } from '@angular/forms';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { HeaderComponentComponent } from './components/header-component/header-component.component';
-import { FooterComponentComponent } from './components/footer-component/footer-component.component';
-import { HomeComponentComponent } from './components/home-component/home-component.component';
-import { ListCategoriesComponentComponent } from './components/list-categories-component/list-categories-component.component';
-import { FilterPipe } from './pipe/filter.pipe';
-import { HighlightDirective } from './highlight.directive';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { ProductModule } from './features/product/product.module';
-import { ProductsCategoryComponent } from './components/products-category/products-category.component';
-import { FilterProductPipe } from './pipe/filter-product.pipe';
-import { FormUserComponentComponent } from './components/form-user-component/form-user-component.component';
-
+import { NotFoundComponent } from './Components/not-found/not-found.component';
+import { FormCategorieComponent } from './Components/form-categorie/form-categorie.component';
+import { CategoryComponent } from './Components/category/category.component';
+import { TestComponent } from './Components/test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    NavbarComponent,
-    HeaderComponentComponent,
-    FooterComponentComponent,
-    HomeComponentComponent,
-    ListCategoriesComponentComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    ListCategoriesComponent,
     FilterPipe,
     HighlightDirective,
     NotFoundComponent,
-    ProductsCategoryComponent,
-    FormUserComponentComponent,
+    FormCategorieComponent,
+    CategoryComponent,
 
-
+   
+    
   ],
-
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ProductModule
-  ],
+    TestComponent
+],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,29 @@
+
+<div class="container" style="margin-top:30px">
+  <div class="row">
+    <h3 appHighlight>Survolez-moi pour voir la surbrillance !</h3>
+    <input
+      type="text"
+      id="search"
+      class="form-control rounded-pill shadow-sm"
+      name="filter"
+      placeholder="Rechercher un categorie ..."
+      [(ngModel)]="titre" #i
+    /><div>
+      <br/>
+    </div>
+      <button  class="form-control rounded-pill " (click)="changeTest()">changeTest</button>
+      <ng-container *ngFor="let c of categories | filter:titre">
+          <div class="col-md-4">
+      <!-- <div *ngIf="title.toLowerCase() == c.title.toLowerCase() || title == ''" class="col-md-4" style="margin-bottom: 20px;"> -->
+      <label >{{test}}</label>
+        <app-category [data]="c" [title]="test" (dataEmitter)="DeleteChild($event)"></app-category> 
+      </div>
+      </ng-container>
+
+      <div class="row">
+          <app-test #child></app-test>
+         {{child.test}}
+      </div>
+  </div>
+</div>

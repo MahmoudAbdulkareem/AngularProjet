@@ -1,17 +1,22 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { TimeoutError } from 'rxjs';
 
 @Pipe({
-  name: 'filterProduct'
+  name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(values: any[], titre :string) :any[] {
-    console.log(titre)
-    if (titre == '') {
-      return values;
+ /* transform(value: unknown, ...args: unknown[]): unknown {
+    return null;
+  }
+    */
+  transform(items: any[], searchText: string): any[] {
+    if ( !searchText) {
+      return items; 
     }
-  
-return values.filter(e=>e.title.toLowerCase() == titre.toLowerCase());
+
+    return items.filter(item => 
+      item.title.toLowerCase().includes(searchText) 
+    );
+
 }
 }

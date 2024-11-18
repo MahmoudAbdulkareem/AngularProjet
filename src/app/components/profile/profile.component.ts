@@ -1,16 +1,15 @@
-import { Component } from '@angular/core';
-import { MainUserComponent } from '../main-user/main-user.component';
-import {RouterModule, Routes} from '@angular/Router';
+import { Component, OnInit } from '@angular/core';
 
-const routes: Routes = [
-
-  (path :"" Component : MainUserComponent)
-]
 @Component({
-  selector: 'ngx-app-profile',
+  selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
 }
